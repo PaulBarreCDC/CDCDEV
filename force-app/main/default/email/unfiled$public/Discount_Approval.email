@@ -1,0 +1,11 @@
+{!Today}
+
+Dear {!NullValue(Contact.FirstName, "Sir or Madam")},
+
+Approval needed for {!QuoteLineItem.Discount}
+
+Sincerely,
+
+{!User.FullName}
+{!Organization.Name}
+{!User.Email}

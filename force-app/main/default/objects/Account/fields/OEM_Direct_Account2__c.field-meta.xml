@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OEM_Direct_Account2__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Autopopulated from Flow/PB to match OEM Direct Account checkbox and be used in the Criteria based sharing rule to NOT allow partner users access to the field</description>
+    <externalId>false</externalId>
+    <label>OEM Direct Account 2.0</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

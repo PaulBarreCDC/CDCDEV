@@ -1,0 +1,99 @@
+<messaging:emailTemplate subject="Discount Approval Needed" recipientType="User" relatedToType="SBQQ__Quote__c">
+<messaging:htmlEmailBody >
+-----------Discount Approval Needed-----------<br/><br/>
+<b>Quote Number:</b> {!RelatedTo.Quote_Number__c}<br/><br/>
+
+<b>Billing Account:</b> {!RelatedTo.SBQQ__BillingName__c}, 
+{!RelatedTo.SBQQ__BillingCity__c}, 
+{!RelatedTo.SBQQ__BillingState__c}, 
+{!RelatedTo.SBQQ__BillingCountry__c}.<br/><br/>
+
+<b>Shipping Account:</b> {!RelatedTo.SBQQ__ShippingName__c}, 
+{!RelatedTo.SBQQ__ShippingCity__c}, 
+{!RelatedTo.SBQQ__ShippingState__c}, 
+{!RelatedTo.SBQQ__ShippingCountry__c}.<br/><br/>
+
+<b>End User Account:</b> {!RelatedTo.End_User_Name__c}, 
+{!RelatedTo.End_User_City__c}, 
+{!RelatedTo.End_User_State__c}, 
+{!RelatedTo.End_User_Country__c}.<br/><br/>
+
+<b>Created By:</b> {!RelatedTo.CreatedBy.Name}<br/><br/>
+
+<b>Assigned Inside Salesperson:</b> {!RelatedTo.Inside_Sales_Approver__r.Name}<br/><br/>
+
+<b>Assigned Regional Manager:</b> {!RelatedTo.Regional_Manager__r.Name}<br/><br/>
+
+<b>Project Flag:</b> {!RelatedTo.Project_Classification__c}<br/><br/>
+</messaging:htmlEmailBody>
+
+<messaging:attachment renderAs="pdf" filename="{!RelatedTo.Quote_Number__c}">
+     
+    <div>
+        <h1>
+            Charges
+        </h1>    
+        <h3>
+            Charges Included on quote
+        </h3>        
+        <table width="100%" border="1">
+            <tr>
+                <th>
+                    Charge
+                </th>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Created Date
+                </th>
+            </tr>
+            
+            <apex:repeat value="{!RelatedTo.Charges__r}" var="charge">
+                <tr>
+                    <td>
+                        {!charge.Amount__c}
+                    </td>
+                    <td>
+                        {!charge.Type__c}
+                    </td>
+                    <td>
+                        {!charge.CreatedDate}
+                    </td>
+                </tr>
+            </apex:repeat>
+        </table>
+    </div>
+    
+    <div>
+        <h1>
+            Line Items
+        </h1>
+        <h3>
+            Line Items Needing Lead-time Assistance
+        </h3>    
+        <apex:repeat value="{!RelatedTo.SBQQ__LineItems__r}" var="item">
+            <b>Line Item:</b> {!item.Quote_Line_Number__c}<br/>
+            <b>Line Status:</b> {!item.Line_Status__c}<br/>
+            <b>Quantity:</b> {!item.SBQQ__Quantity__c}<br/>
+            <b>Configurator Used:</b> {!item.SBQQ__ProductCode__c}<br/>
+            <b>Selected Brand:</b> {!item.Brand__c}<br/>
+            <b>Selected Selling Entity:</b> {!RelatedTo.Sales_Division__c} | <b>Selected Source Entity:</b> {!item.Sourcing_Entity__c}<br/>
+            <b>Standard Lead-time:</b> {!item.Leadtime__c} | <b>Requested Lead-time:</b> {!item.Customer_Leadtime__c} | <b>Production Planning Lead-time:</b> {!item.Production_Planning_Leadtime__c}<br/>
+            <b>Total List Price Each:</b> $ {!item.SBQQ__ListPrice__c}<br/>
+            <b>Discountable List Price Each:</b>$ {!item.Discountable_List_Price__c}<br/>
+            <b>Total List Price:</b> $ {!item.SBQQ__ListTotal__c}<br/>
+            <b>Total Net Price:</b> $ {!item.SBQQ__NetTotal__c}<br/>
+            <b>Total Discount Amount:</b> $ {!item.SBQQ__Discount__c}<br/>
+            <b>Commission%:</b> {!item.Maximum_Commission__c} %
+            <br/>            
+            
+            
+            
+            <br/>
+        </apex:repeat>
+        
+    </div>
+</messaging:attachment>
+ 
+</messaging:emailTemplate>

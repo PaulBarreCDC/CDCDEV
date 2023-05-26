@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cdcpc__All</fullName>
+    <columns>NAME</columns>
+    <columns>cdcpc__OutLinerMatl__c</columns>
+    <columns>cdcpc__OutLinerThck__c</columns>
+    <columns>cdcpc__SealMatl__c</columns>
+    <columns>cdcpc__SealThck__c</columns>
+    <columns>cdcpc__SecondSealMatl__c</columns>
+    <columns>cdcpc__SlotCovMatl__c</columns>
+    <columns>cdcpc__SlotCovThck__c</columns>
+    <columns>cdcpc__SZC__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

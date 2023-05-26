@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subject__c</fullName>
+    <externalId>false</externalId>
+    <label>Subject</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Request cancelation of an in-process order</fullName>
+                <default>false</default>
+                <label>Request cancelation of an in-process order</label>
+            </value>
+            <value>
+                <fullName>Request Cancelation of in-process quote</fullName>
+                <default>false</default>
+                <label>Request Cancelation of in-process quote</label>
+            </value>
+            <value>
+                <fullName>Request change to an ordered quote</fullName>
+                <default>false</default>
+                <label>Request change to an ordered quote</label>
+            </value>
+            <value>
+                <fullName>Request Eng support for a configured product missing information</fullName>
+                <default>false</default>
+                <label>Request Eng support for a configured product missing information</label>
+            </value>
+            <value>
+                <fullName>Request Eng support on valid product that needs to be special</fullName>
+                <default>false</default>
+                <label>Request Eng support on valid product that needs to be special</label>
+            </value>
+            <value>
+                <fullName>Request expedited return of a quote in Production Planning queue</fullName>
+                <default>false</default>
+                <label>Request expedited return of a quote in Production Planning queue</label>
+            </value>
+            <value>
+                <fullName>Request expedited return of quote in Engineering Sales Support queue</fullName>
+                <default>false</default>
+                <label>Request expedited return of quote in Engineering Sales Support queue</label>
+            </value>
+            <value>
+                <fullName>Request Inside Sales support for assistance on a quote</fullName>
+                <default>false</default>
+                <label>Request Inside Sales support for assistance on a quote</label>
+            </value>
+            <value>
+                <fullName>Request reduced leadtime or assignment of invalid leadtime</fullName>
+                <default>false</default>
+                <label>Request reduced leadtime or assignment of invalid leadtime</label>
+            </value>
+            <value>
+                <fullName>Request update on in-process order</fullName>
+                <default>false</default>
+                <label>Request update on in-process order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

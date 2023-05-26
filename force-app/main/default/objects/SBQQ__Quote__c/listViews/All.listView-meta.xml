@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Brand_Order_Type__c</columns>
+    <columns>SBQQ__Opportunity2__c</columns>
+    <columns>SBQQ__Status__c</columns>
+    <columns>SBQQ__Primary__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Total_Charges__c</columns>
+    <columns>Total_Bookings__c</columns>
+    <columns>Total_Quote_Line_Bookings__c</columns>
+    <columns>SBQQ__LineItemCount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Brand_Order_Type__c</field>
+        <operation>equals</operation>
+        <value>CDC</value>
+    </filters>
+    <label>All Quotes</label>
+</ListView>

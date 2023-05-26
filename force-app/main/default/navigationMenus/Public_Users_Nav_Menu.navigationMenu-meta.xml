@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>CDC Salesforce Partner Community</container>
+    <containerType>Network</containerType>
+    <label>Public Users Nav Menu</label>
+    <navigationMenuItem>
+        <label>Sizing Requests</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>cdcpc__SizingRequest__c</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Orders</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Order</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>Careers</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>https://www.contdisc.com/careers/</target>
+        <type>ExternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

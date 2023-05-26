@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cdcpc__All</fullName>
+    <columns>NAME</columns>
+    <columns>cdcpc__PTC__c</columns>
+    <columns>cdcpc__SZC__c</columns>
+    <columns>cdcpc__STC__c</columns>
+    <columns>cdcpc__VMNFA__c</columns>
+    <columns>cdcpc__PressLL__c</columns>
+    <columns>cdcpc__PressUL__c</columns>
+    <columns>cdcpc__China_ML_LL__c</columns>
+    <columns>cdcpc__China_ML_UL__c</columns>
+    <columns>cdcpc__VacLL__c</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>cdcpc__ASME_LL__c</columns>
+    <columns>cdcpc__ASME_UL__c</columns>
+    <columns>cdcpc__DSCVAR__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>cdcpc__PTC__c</field>
+        <operation>equals</operation>
+        <value>CAL</value>
+    </filters>
+    <label>All</label>
+</ListView>

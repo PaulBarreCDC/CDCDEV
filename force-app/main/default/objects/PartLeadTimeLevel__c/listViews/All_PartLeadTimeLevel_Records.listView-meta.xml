@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_PartLeadTimeLevel_Records</fullName>
+    <columns>NAME</columns>
+    <columns>ConfiguredPart__c</columns>
+    <columns>LeadTimeDays__c</columns>
+    <columns>Site__c</columns>
+    <columns>QuantityLowerLimit__c</columns>
+    <columns>QuantityUpperLimit__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Part Lead Time Level Records</label>
+</ListView>

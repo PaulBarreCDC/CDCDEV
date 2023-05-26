@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EngPPApprovedToApproveQuote</fullName>
+    <active>true</active>
+    <description>Both Eng Review Status and Prod Planning Status Must not be in any &apos;Review&apos; stage in order for the quote to be set to approved</description>
+    <errorConditionFormula>AND( ISPICKVAL(SBQQ__Status__c, &apos;Approved&apos;),
+				OR  (  ISPICKVAL(Prod_Planning_Status__c , &apos;In Review&apos;) ,
+								  	  ISPICKVAL( Eng_Review_Status__c, &apos;In Review&apos;) ,
+									    ISPICKVAL( Eng_Review_Status__c, &apos;In Process&apos;) ,
+									    ISPICKVAL( Eng_Review_Status__c, &apos;On Hold - Sales&apos;) ,
+								     ISPICKVAL( Eng_Review_Status__c, &apos;On Hold - Config Issue&apos;)
+									))</errorConditionFormula>
+    <errorMessage>Quote cannot be approved while either the Eng Review Status or Prod Planning Status is in a &apos;Review&apos; Stage. Please reach out to Engineering or Prod Planning Teams to remove the flag.</errorMessage>
+</ValidationRule>

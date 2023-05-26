@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Configuration_Availability__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Available (Default) will show only available configurations. Restricted will show both Available AND Restricted configs. Unavailable will show configurations that are unavailable.</inlineHelpText>
+    <label>Configuration Availability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A</fullName>
+                <default>true</default>
+                <label>Available</label>
+            </value>
+            <value>
+                <fullName>R</fullName>
+                <default>false</default>
+                <label>Restricted</label>
+            </value>
+            <value>
+                <fullName>U</fullName>
+                <default>false</default>
+                <label>Unavailable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

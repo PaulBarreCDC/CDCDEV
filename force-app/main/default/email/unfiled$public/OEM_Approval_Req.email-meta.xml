@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <available>true</available>
+    <description>used for commercial approvals on OEM Orders. Doesn&apos;t have &quot;Discount&quot; field from the Quote header, as it was always set to 0. Replace with Leadtime field.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OEM Approval Request Template w Leadtime w/o Discount</name>
+    <packageVersions>
+        <majorNumber>236</majorNumber>
+        <minorNumber>1</minorNumber>
+        <namespace>sbaa</namespace>
+    </packageVersions>
+    <style>none</style>
+    <subject>OEM Approval Needed for Quote:</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

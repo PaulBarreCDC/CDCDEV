@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Internal Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Internal Tasks</value>
+    </caseValues>
+    <layouts>
+        <layout>Internal Task Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Engineering Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Prod Planning Section</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Subject and Comments</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Task Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Complete_Engineering</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Complete_Internal_Task</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Complete_Production_Planning</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Internal_Task_Assistance</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

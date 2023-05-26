@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used in Quote Follow Up flow.</description>
+    <externalId>false</externalId>
+    <label>Follow Up Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Quotes (Follow Up Contact)</relationshipLabel>
+    <relationshipName>Quotes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

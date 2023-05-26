@@ -1,0 +1,102 @@
+<messaging:emailTemplate subject="Your Quote {!relatedTo.QuoteNumber__c} has been rejected" recipientType="User" relatedToType="sbaa__Approval__c">
+<messaging:htmlEmailBody >
+<html>
+    <body>
+        <div id="logo"><img height="50px" src="https://contdisccorp--c.na94.content.force.com/servlet/servlet.ImageServer?id=0152K000006xXd8&oid=00D6A0000037vQ1&lastMod=1608241676000" alt="Company Logo" /></div>
+        
+        <h3 style="color:#c42127;">Management has rejected your approval request for Quote {!relatedTo.QuoteNumber__c}</h3>
+        <h4>Rejection Notes: {!relatedTo.sbaa__CommentsLong__c}</h4>
+
+<!--Account, Destination Rep Name, End User Account, Discount %, Quote Total Amount, -->
+       <table style="border-collapse:collapse; width:100%;">
+            <thead>
+                <tr style="width:100%;">
+                    <th colspan="5" style="width:5%; background-color:#c60015; color:#fff; padding:5px; border:solid 1pt #c60015;">
+                        Deal Information
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Account
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.AccountName__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        End User Account
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.EndUserAccountName__c}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Sold By Rep
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.SoldByRepAccountName__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Discount %
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        <apex:outputText value="{0, number}">
+                            <apex:param value="{!relatedTo.AvgCustomerDiscount__c}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Destination Rep
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.DestinationRepAccountName__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+
+                        Quote Total Amount
+
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                                       <apex:outputText value="{0, number}">
+
+                        <apex:param value="{!relatedTo.QuoteTotalAmount__c}" />
+                                                </apex:outputText>
+
+                    </td>
+                </tr>
+                <!--
+                <tr>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Reason
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.Reason__c}
+                    </td>
+                    <td style="text-align:left width:10%; padding:5px;"></td>
+                    <td style="text-align:left; width:20%; padding:5px;">
+                        Approval Status
+                    </td>
+                    <td style="text-align:right; width:25%;padding:5px;">
+                        {!relatedTo.sbaa__Status__c}
+                    </td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+        
+        <p></p>
+        
+        <p>Click <a href="https://na94.salesforce.com/{!relatedTo.Quote__c}">here</a> to go to view the Quote.</p>
+        
+    </body>
+</html> 
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

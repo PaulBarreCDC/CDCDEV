@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneNonChangeOrderQuotePerOppty</fullName>
+    <active>false</active>
+    <description>This validation rule is brought in to prevent multiple quotes from occurring on an opportunity so that Opportunity reports for Tinicum will be more accurate. There still can be multiple quotes via change orders</description>
+    <errorConditionFormula>of_Non_Change_Order_Quotes__c &gt; 0 &amp;&amp;  
+	ISCHANGED(of_Non_Change_Order_Quotes__c)</errorConditionFormula>
+    <errorMessage>You are trying to add another quote to an Opportunity that already has a related quote. Please make a new Opportunity for this. NOTE: you can clone this Opportunity, but double check the accounts and give the Opportunity a different name</errorMessage>
+</ValidationRule>

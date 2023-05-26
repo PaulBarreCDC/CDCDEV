@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_Up_Task_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in Process Builder Criteria for Quote Follow up. To flag if a Follow Up task had been sent out.</description>
+    <externalId>false</externalId>
+    <label>Follow Up Task Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
